@@ -92,9 +92,16 @@ body {
 	object-fit: cover;
 	object-position: center;
 	filter: brightness(.4);
+	
 }
 
 .slider .thumb-img.active {
 	border: 5px solid white;
 	filter: brightness(1);
+}
+
+.text-top{
+
+	color: white;
+	
 }
