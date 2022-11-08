@@ -99,9 +99,18 @@ body {
 	border: 5px solid white;
 	filter: brightness(1);
 }
-
+.testo{
+	font-size: .8rem;
+}
 .text-top{
-
+	position: absolute;
+	bottom:20px;
+	right:0;
+	text-align: right;
+	display: none;
+	object-position: center;
+}
+.active-testo{
+	display: block;
 	color: white;
-	
 }

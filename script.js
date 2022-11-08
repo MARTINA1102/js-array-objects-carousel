@@ -44,16 +44,19 @@ for (let i = 0; i < arrImages.length; i++) {
 	const objFoto = arrImages[i];
 	// creare i tag immagine che va nella sezione grande .slider-viewer
 	const eleImg = document.createElement('img');
-	const eleTesto=document.createElement('div');
-	eleTesto.innerHTML=(`${objFoto.text}`);
-	eleTesto.classList.add('text-top');
+	const eleTitolo=document.createElement('h1');
+	eleTitolo.innerHTML+=(`${objFoto.title} <div class=testo>${objFoto.text}</div>`);
+	eleTitolo.classList.add('text-top');
 	eleImg.src = objFoto.image;
 	eleImg.classList.add('slider-img');
 	if (i === 0) {
 		eleImg.classList.add('active');
+		eleTitolo.classList.add('active-testo')
+
 	}
 	eleSliderViewer.append(eleImg);
-	eleSliderViewer.append(eleTesto);
+	eleSliderViewer.append(eleTitolo);
+
 
 	// creare i tag immagine che vanno nella sezione .thumbs
 	const eleThumb = document.createElement('img');
