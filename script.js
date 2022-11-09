@@ -71,6 +71,7 @@ for (let i = 0; i < arrImages.length; i++) {
 
 const listEleImg = document.querySelectorAll('.slider-img'); // non e' un array ma qualcosa di simile
 const listThumbs = document.querySelectorAll('.thumb-img');
+const listEleTitolo=document.querySelectorAll('.text-top');
 
 let activeIndex = 0;
 document.body.style.backgroundImage = `url('${arrImages[activeIndex].image}')`;
@@ -81,6 +82,8 @@ eleBtnRight.addEventListener('click', function () {
 	// togliere la classe active dall'elemento attivo corrente
 	listEleImg[activeIndex].classList.remove('active');
 	listThumbs[activeIndex].classList.remove('active');
+	listEleTitolo[activeIndex].classList.remove('active-testo');
+
 	
 
 	// incrementare l'active index con reset per slider infinito
@@ -100,6 +103,8 @@ eleBtnRight.addEventListener('click', function () {
 	// aggiungere la classe active all'elemento successivo
 	listEleImg[activeIndex].classList.add('active');
 	listThumbs[activeIndex].classList.add('active');
+	listEleTitolo[activeIndex].classList.add('active-testo');
+
 	document.body.style.backgroundImage = `url('${arrImages[activeIndex].image}')`;
 	document.body.style.backgroundSize = 'cover';
 });
@@ -108,6 +113,8 @@ eleBtnLeft.addEventListener('click', function () {
 	// togliere la classe active dall'elemento attivo corrente
 	listEleImg[activeIndex].classList.remove('active');
 	listThumbs[activeIndex].classList.remove('active');
+	listEleTitolo[activeIndex].classList.remove('active-testo');
+
 
 	// decrementare l'active index con reset per slider infinito
 	/*
@@ -126,6 +133,8 @@ eleBtnLeft.addEventListener('click', function () {
 	// aggiungere la classe active all'elemento successivo
 	listEleImg[activeIndex].classList.add('active');
 	listThumbs[activeIndex].classList.add('active');
+	listEleTitolo[activeIndex].classList.add('active-testo');
+
 	document.body.style.backgroundImage = `url('${arrImages[activeIndex].image}')`;
 	document.body.style.backgroundSize = 'cover';
 });
