@@ -51,7 +51,7 @@ for (let i = 0; i < arrImages.length; i++) {
 	eleImg.classList.add('slider-img');
 	if (i === 0) {
 		eleImg.classList.add('active');
-		eleTitolo.classList.add('active-testo')
+		eleTitolo.classList.add('active-testo');
 
 	}
 	eleSliderViewer.append(eleImg);
@@ -73,7 +73,7 @@ const listEleImg = document.querySelectorAll('.slider-img'); // non e' un array 
 const listThumbs = document.querySelectorAll('.thumb-img');
 
 let activeIndex = 0;
-document.body.style.backgroundImage = `url('${arrImages[activeIndex]}')`;
+document.body.style.backgroundImage = `url('${arrImages[activeIndex].image}')`;
 document.body.style.backgroundSize = 'cover';
 
 // aggiungere gli event listeners ai due bottoni
@@ -81,6 +81,7 @@ eleBtnRight.addEventListener('click', function () {
 	// togliere la classe active dall'elemento attivo corrente
 	listEleImg[activeIndex].classList.remove('active');
 	listThumbs[activeIndex].classList.remove('active');
+	
 
 	// incrementare l'active index con reset per slider infinito
 	/*
@@ -99,7 +100,7 @@ eleBtnRight.addEventListener('click', function () {
 	// aggiungere la classe active all'elemento successivo
 	listEleImg[activeIndex].classList.add('active');
 	listThumbs[activeIndex].classList.add('active');
-	document.body.style.backgroundImage = `url('${arrImages[activeIndex]}')`;
+	document.body.style.backgroundImage = `url('${arrImages[activeIndex].image}')`;
 	document.body.style.backgroundSize = 'cover';
 });
 
@@ -125,6 +126,6 @@ eleBtnLeft.addEventListener('click', function () {
 	// aggiungere la classe active all'elemento successivo
 	listEleImg[activeIndex].classList.add('active');
 	listThumbs[activeIndex].classList.add('active');
-	document.body.style.backgroundImage = `url('${arrImages[activeIndex]}')`;
+	document.body.style.backgroundImage = `url('${arrImages[activeIndex].image}')`;
 	document.body.style.backgroundSize = 'cover';
 });
